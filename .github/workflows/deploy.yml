@@ -1,10 +1,10 @@
-name: Deploy Demo #工作流名称，可自定义
-# 触发条件
+name: Deploy Demo
+
 on:
   push:
     branches:
-      - master  # 只在master上push触发部署
-    paths-ignore: # 下列文件的变更不触发部署
+      - master 
+    paths-ignore:
       - README.md
       - LICENSE
 jobs:
