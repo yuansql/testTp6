@@ -30,4 +30,4 @@ jobs:
 
           script: |
             cd /www/wwwroot/ctest.wummm.top/
-            composer update --ignore-platform-reqs
+            composer install --ignore-platform-reqs
