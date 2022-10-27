@@ -1,10 +1,9 @@
-name: Deploy Demo #工作流名称，可自定义
-# 触发条件
+name: Deploy Demo
 on:
   push:
     branches:
-      - master  # 只在master上push触发部署
-    paths-ignore: # 下列文件的变更不触发部署
+      - master
+    paths-ignore:
       - README.md
       - LICENSE
 jobs:
@@ -28,7 +27,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_KEY }}
-          
+
           script: |
             cd /www/wwwroot/ctest.wummm.top/
-            composer update
+            composer update --ignore-platform-reqs
