@@ -23,7 +23,7 @@
         "php": ">=7.2.5",
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
-        "hg/apidoc": "^3.1"
+        "easy-task/easy-task": "^2.4.5"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",
