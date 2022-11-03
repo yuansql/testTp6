@@ -2,6 +2,7 @@
 namespace app\controller;
 
 use app\BaseController;
+use test\testTp;
 
 class Index extends BaseController
 {
@@ -13,5 +14,12 @@ class Index extends BaseController
     public function hello($name = 'ThinkPHP611')
     {
         return 'hello,' . $name;
+    }
+    
+    public function testTp()
+    {
+    	bind('t', testTp::class);
+	    $cache = app('t')->getS1();
+    	echo $cache;
     }
 }
