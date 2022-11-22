@@ -35,7 +35,7 @@ class Order extends Command
 		$queue_name = 'delay_queue_order';
 		
 		//指定交换机类型为direct
-		$channel->exchange_declare($exc_name, 'direct', false, true, false);
+		$channel->exchange_declare($exc_name, 'x-delayed-message', false, true, false);
 		
 		//将队列名与交换器名进行绑定，并指定routing_key
 		$channel->queue_bind($queue_name, $exc_name, $routing_key);

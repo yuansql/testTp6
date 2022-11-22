@@ -46,7 +46,7 @@ class Goods
 		$ttl = 20000;
 		
 		//指定交换机类型为direct
-		$channel->exchange_declare($exc_name, 'direct', false, true, false);
+		$channel->exchange_declare($exc_name, 'x-delayed-message', false, true, false);
 		$args = new AMQPTable(['x-delayed-type' => 'direct']);
 		
 		$channel->queue_declare($queue_name, false, true, false, false, false, $args);
