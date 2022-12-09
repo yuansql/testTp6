@@ -7,11 +7,14 @@ use think\facade\Db;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
+use think\facade\Log;
 
 class Goods
 {
 	public function index()
 	{
+		$msg =11;
+		Log::write($msg);
 		return '到达';
 		return view('goods');
 	}
