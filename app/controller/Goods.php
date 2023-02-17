@@ -13,7 +13,7 @@ class Goods
 {
 	public function index()
 	{
-		$msg =11;
+		$msg =11111;
 		Log::write($msg);
 		return '到达';
 		return view('goods');
